@@ -1,0 +1,21 @@
+AeLookupSvc : Application Experience
+BDESVC : BitLocker Drive Encryption
+BITS : Background Intelligent Transfer
+CcmExec : SMS Agent Host
+CertPropSvc : Certificate Propagation
+Eaphost : Extensible Authentication Protocol
+gpsvc : Group Policy Client
+IKEEXT : IKE and AuthIP IPsec Keying Modules
+iphlpsvc : IP Helper
+LanmanServer : Server
+MMCSS : Multimedia Class Scheduler
+ProfSvc : User Profile Service
+Schedule : Task Scheduler
+SENS : System Event Notification
+SessionEnv : Remote Desktop Configuration
+ShellHWDetection : Shell Hardware Detection
+SystemEventsBroker : System Events Broker
+Themes : Themes
+Winmgmt : Windows Management Instrumentation
+wlidsvc : Microsoft Account Sign-in Assistant
+wuauserv : Windows Update

@@ -1,0 +1,1 @@
+for /f %%a in (%1) do copy /y %2 \\%%a\%3

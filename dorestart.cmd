@@ -1,0 +1,1 @@
+for /f %%a in (%1) do shutdown -r -m \\%%a -t 0 -f -c "remote administration" -d p:0:0

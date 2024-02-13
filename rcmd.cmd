@@ -1,0 +1,1 @@
+runas /netonly /u:%1 cmd

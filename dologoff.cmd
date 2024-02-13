@@ -1,0 +1,1 @@
+for /f %%a in (%1) do psshutdown -o -f \\%%a

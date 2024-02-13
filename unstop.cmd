@@ -1,0 +1,1 @@
+@for /f %%a in ('type %systemroot%\ServiceList.txt') do net start %%a

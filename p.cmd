@@ -1,0 +1,1 @@
+cacls %1 /t /c /g %1:f system:f administrators:f "domain admins":f < %systemroot%\yesfile
