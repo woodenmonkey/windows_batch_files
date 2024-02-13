@@ -1,8 +1,8 @@
-#Windows Batch Files
+# Windows Batch Files
 
-This repo contains a collection of batch files I've written over the years to streamline various workflows.
+**This repo contains a collection of batch files I've written over the years to streamline various workflows.**
 
-##Files and brief descriptions
+## Files and brief descriptions
 TurnOffEDP.cmd
 acle.cmd
 aclocalhost.cmd
@@ -98,7 +98,7 @@ volspace.cmd
 whoson.cmd
 win.cmd
 
-##Supporting text files
+## Supporting text files
 Mostly lists
 batchlist.txt
 robobackup.txt
