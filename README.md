@@ -3,17 +3,28 @@
 **This repo contains a collection of batch files I've written over the years to streamline various workflows.**
 
 ## Files and brief descriptions
+
 TurnOffEDP.cmd
 acle.cmd
+
 aclocalhost.cmd
+
 ad.cmd
+
 adl.cmd
+
 admin.cmd
+
 adoc.cmd
+
 alldown.cmd
+
 analog.cmd
+
 as.cmd
+
 atmp.cmd
+
 batchcopy.cmd
 batchcopyall.cmd
 bigparse.cmd
