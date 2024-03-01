@@ -66,12 +66,12 @@ if not exist %B_SHARE%\%IBRANCH%\ goto NONET
 REM ---------------------------------Switch banches----------------------------------------
 
 if [%1]==[-c] (
-	goto SAGA
+	goto ORG
 ) ELSE (
 	goto NEVERMIND
 )
 
-:SAGA
+:ORG
 
 if exist %B_LIST% (del %B_LIST%)
 if exist %SHORTLIST% (del %SHORTLIST%)
@@ -85,7 +85,7 @@ if exist %SCANDIDATES% (del %SCANDIDATES%)
 
 for /f "delims=" %%i IN ('dir %B_SHARE%\*edge* /b /ad-h') do echo %%i>> %B_LIST%
 rem for /f "delims=" %%i IN ('dir %B_SHARE%\rs_edge* /b /ad-h') do echo %%i>> %B_LIST%
-for /f %%i in ('find /V /C "" ^< %B_LIST%') do set SAGA_BRANCHCOUNT=%%i
+for /f %%i in ('find /V /C "" ^< %B_LIST%') do set ORG_BRANCHCOUNT=%%i
 
 echo. >> %CHOICES%
 echo ------------------------------------------------------------------------------>> %CHOICES%
@@ -98,11 +98,11 @@ for /f "delims=;" %%D in (%B_LIST%) do (
     if not "%%D"==" " (
         set /a NUM+=1
         echo [!NUM!] %%D>> %CHOICES%
-        if !NUM!==%SAGA_BRANCHCOUNT% goto SAGABRANCHES
+        if !NUM!==%ORG_BRANCHCOUNT% goto ORGBRANCHES
     )
 )
 
-:SAGABRANCHES
+:ORGBRANCHES
 
 echo.>> %CHOICES%
 echo.>> %CHOICES%
@@ -130,14 +130,14 @@ if %SELECTION%==c (
 	goto SWITCH
 )
 if %SELECTION% GEQ 1 (
-	if %selection% LEQ %SAGA_BRANCHCOUNT% (
-		goto SETSAGA
+	if %selection% LEQ %ORG_BRANCHCOUNT% (
+		goto SETORG
 	)
 ) ELSE (
 	goto END
 )
 
-:SETSAGA
+:SETORG
 for /f "tokens=1-2" %%i in (%CHOSEN%) do set IBRANCH=%%j
 
 if exist %CHOICES% (del %CHOICES%)
@@ -353,7 +353,7 @@ if %SELECTION%==i (
 	goto DOIT
 )
 if %SELECTION%==l (
-	goto SAGA
+	goto ORG
 )
 if %SELECTION%==x (
 	goto END
@@ -512,7 +512,7 @@ if %SELECTION%==i (
 	goto DOIT
 )
 if %SELECTION%==l (
-	goto SAGA
+	goto ORG
 )
 if %SELECTION%==x (
 	goto END
@@ -677,7 +677,7 @@ echo RECENT_FOLDER: %RECENT_FOLDER%
 echo TARGET: %TARGET%
 echo CANDIDATE_THRESHOLD: %CANDIDATE_THRESHOLD%
 echo CANDIDATE_COUNT: %CANDIDATE_COUNT%
-echo SAGA_BRANCHCOUNT: %SAGA_BRANCHCOUNT%
+echo ORG_BRANCHCOUNT: %ORG_BRANCHCOUNT%
 echo TASKLIST: %TASKLIST%
 echo B_SHARE: %B_SHARE%
 echo B_TEMP: %B_TEMP%
@@ -728,7 +728,7 @@ set B_LIST=
 set SORTEDLIST=
 set CANDIDATE_THRESHOLD=
 set CANDIDATE_COUNT=
-set SAGA_BRANCHCOUNT=
+set ORG_BRANCHCOUNT=
 set TARGET=
 set BUILDERROR=
 set NUM=
