@@ -1,5 +1,6 @@
 @echo off
 
+ECHO.
 ECHO This batch file shows you your build, branch, version, and the date you installed it.
 ECHO Then it checks \\winbuilds\release for newer builds of the installed branch
 ECHO All build folders found are checked for install media
