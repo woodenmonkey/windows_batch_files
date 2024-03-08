@@ -13,6 +13,8 @@ ECHO If a newer versions with no media is found you will see an offer to open th
 ECHO.
 ECHO Build followed by a machine name will retrieve the build, branch and version installed on the remote machine
 ECHO Build follwed by -c, will present a list of edge branches to install
+ECHO.
+ECHO ------------------------------------------------------------------------------
 
 SETLOCAL enabledelayedexpansion
 SETLOCAL enableextensions
