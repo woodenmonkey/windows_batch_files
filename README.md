@@ -20,6 +20,7 @@
 * bigparse.cmd
 * bigsparse.cmd
 * bigsparsed.cmd
+* brutal.cmd
 * build.cmd
 * cvl.cmd
 * daf.cmd
@@ -83,6 +84,8 @@
 * se.cmd
 * servicedetails.cmd
 * so.cmd
+* split_csv_with_header.cmd
+* split_csv_with_header_powershell.cmd
 * static.cmd
 * sticksync.cmd
 * stop.cmd
