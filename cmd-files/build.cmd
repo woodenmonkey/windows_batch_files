@@ -1,15 +1,15 @@
 @echo off
 
 ECHO.
-ECHO This batch file shows you your build, branch, version, and the date you installed it.
+ECHO This batch retrieves and displays your build, branch, version, and the date you installed it.
 ECHO Then it checks \\winbuilds\release for newer builds of the installed branch
-ECHO All build folders found are checked for install media
+ECHO All existing build folders are checked for install media
 ECHO.
-ECHO If a newer version(s) is found you will be asked to start an unattended install of that version
+ECHO If a newer version is found you will be asked if you'd like to start an unattended install of that version
 ECHO.
-ECHO If multiple newer versions are found you will be prompted to select a version to install
+ECHO If newer versions are found you will be presented options if you'd like to install one of them
 ECHO.
-ECHO If a newer versions with no media is found you will see an offer to open the folder and es/ri
+ECHO If a newer versions with no media are found you will be presented an option to open the folder and es/ri
 ECHO.
 ECHO Build followed by a machine name will retrieve the build, branch and version installed on the remote machine
 ECHO Build follwed by -c, will present a list of edge branches to install
