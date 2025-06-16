@@ -1,4 +1,8 @@
 # macOS: Finder and metadata files
+# These don't seem to work
+# This may be a git bug
+# I did testing and independed repros, not just making it up...
+# Solution was to add them to ~/.config/git/ignore
 .DS_Store              # Finder directory custom attributes
 .AppleDouble           # AppleDouble encoded files (resource forks)
 .LSOverride            # Finder launch services overrides
