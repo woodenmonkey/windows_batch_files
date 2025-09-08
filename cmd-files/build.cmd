@@ -1,18 +1,25 @@
 @echo off
 
+@echo off
+
 ECHO.
-ECHO This batch retrieves and displays your build, branch, version, and the date you installed it.
-ECHO Then it checks \\winbuilds\release for newer builds of the installed branch
-ECHO All existing build folders are checked for install media
+ECHO Build Helper — checks your Windows build/branch/version and install date (local by default).
+ECHO Scans \\winbuilds\release\<branch>\ for newer builds and verifies install media at:
+ECHO   %PROCESSOR_ARCHITECTURE%%CHKFRE%\media\%SKU%\setup.exe
+ECHO If newer builds are found, you can install unattended, open the build folder, or view ES status.
+ECHO If the newest folder has no media, you’ll see other recent candidates that DO have media.
 ECHO.
-ECHO If a newer version is found you will be asked if you'd like to start an unattended install of that version
+ECHO Usage:
+ECHO   build                  Inspect THIS machine and suggest newer builds for its current branch.
+ECHO   build -c [N]           Choose/switch an Edge branch, then check up to N recent folders (default 15).
+ECHO   build <MachineName>    Show build/branch/version on a REMOTE machine.
+ECHO   (Optional [N] without -c also raises the recent-folder check limit; default is 15.)
 ECHO.
-ECHO If newer versions are found you will be presented options if you'd like to install one of them
-ECHO.
-ECHO If a newer versions with no media are found you will be presented an option to open the folder and es/ri
-ECHO.
-ECHO Build followed by a machine name will retrieve the build, branch and version installed on the remote machine
-ECHO Build follwed by -c, will present a list of edge branches to install
+ECHO Notes:
+ECHO * Requires access to \\winbuilds\release (CorpNet/VPN). If unreachable, update checks are skipped.
+ECHO * Unattended install uses setup.exe /unattend and may reboot; run as admin and close apps first.
+ECHO * Uses %PROCESSOR_ARCHITECTURE% and %CHKFRE%=fre to locate media; SKU is %SKU%.
+ECHO * When multiple newer builds exist, you can pick a specific build or install the most recent with media.
 ECHO.
 ECHO ------------------------------------------------------------------------------
 
