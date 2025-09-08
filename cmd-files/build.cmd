@@ -1,7 +1,5 @@
 @echo off
 
-@echo off
-
 ECHO.
 ECHO Build Helper — checks your Windows build/branch/version and install date (local by default).
 ECHO Scans \\winbuilds\release\<branch>\ for newer builds and verifies install media at:
