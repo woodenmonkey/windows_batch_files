@@ -29,7 +29,7 @@
 * `demosetup.cmd` — add a demo host entry to the system hosts file.
 * `df.cmd` — build a datetime string for use in scripts.
 * `dfa.cmd` — change directory to the dumpfiles folder.
-* `dhcp.cmd` — set all network interfaces to DHCP.
+* `dhcp.cmd` — set all network interfaces to use DHCP.
 * `dl.cmd` — change directory into the user Downloads folder.
 * `do.cmd` — query remote hosts for system uptime.
 * `doc.cmd` — change directory to the local Documents folder.
